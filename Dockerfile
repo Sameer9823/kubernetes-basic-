@@ -11,4 +11,5 @@ FROM node:22-alpine
 WORKDIR /app
 COPY --from=builder /app /app 
 EXPOSE 3000
-CMD ["node", "index.js"]
+ENV PORT=3000
+CMD ["node", "index.js", "start"]

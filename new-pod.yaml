@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nodeapp-pod-v2
+  labels:
+    app: nodeapp
+spec:
+  imagePullSecrets:
+  - name: sample-docker-secret
+  containers:
+  - name: nodeapp
+    image: sameer1703/demo:latest
+    ports:
+    - containerPort: 3000
+    resources:
+      requests:
+        cpu: "100m"
+      limits:
+        cpu: "200m"
