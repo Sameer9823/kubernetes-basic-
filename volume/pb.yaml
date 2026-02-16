@@ -3,7 +3,7 @@ kind: PersistentVolume
 metadata:
   name: nginx-pv
 spec:
-  storageClassName: nginx-storage
+  storageClassName: default
   capacity:
     storage: 1Gi
   accessModes:
